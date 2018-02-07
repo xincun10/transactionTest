@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<!-- 连接四大参数配置 -->
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+		
+		<!-- 池参数配置 -->
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">2</property>
+		<property name="maxPoolSize">10</property>
+	</default-config>
+	
+	<!-- 专门为oracle提供的配置信息 -->
+	<named-config name="oracle-config">
+		<!-- 连接四大参数配置 -->
+		<property name="jdbcUrl">jdbc:oracle:thin:@localhost:1523:databaseName</property>
+		<property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+		<property name="user">c##scott</property>
+		<property name="password">tiger</property>
+		
+		<!-- 池参数配置 -->
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">2</property>
+		<property name="maxPoolSize">10</property>
+	</named-config>
+	
+	<!-- 专门为sqlServer提供的配置信息 -->
+	<named-config name="sqlServer-config">
+		<!-- 连接四大参数配置 -->
+		<property name="jdbcUrl">jdbc:microsoft:sqlserver://127.0.0.1:1433;databaseName=test</property>
+		<property name="driverClass">com.microsoft.jdbc.sqlserver.SQLServerDriver</property>
+		<property name="user">sa</property>
+		<property name="password">123456</property>
+		
+		<!-- 池参数配置 -->
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">2</property>
+		<property name="maxPoolSize">10</property>
+	</named-config>
+</c3p0-config>
